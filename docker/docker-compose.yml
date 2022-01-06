@@ -12,7 +12,7 @@ services:
     # volumes:
     #   - pgdata:/var/lib/postgresql/data:rw
     ports:
-      - 5432:5432
+      - 5433:5432
 #
   bacula-dir:
     image: fametec/bacula-director:11.0.5
@@ -22,7 +22,7 @@ services:
     depends_on: 
       - db      
     ports:
-      - 9101:9101
+      - 9109:9101
 #
   bacula-sd:
     image: fametec/bacula-storage:11.0.5
@@ -33,7 +33,7 @@ services:
     volumes:
       - ./etc:/opt/bacula/etc:ro
     ports:
-      - 9103:9103
+      - 9104:9103
 #
   bacula-fd:
     image: fametec/bacula-client:11.0.5
@@ -45,7 +45,7 @@ services:
     volumes:
       - ./etc:/opt/bacula/etc:ro
     ports:
-      - 9102:9102
+      - 9105:9102
 #
   baculum-api:
     image: fametec/baculum-api:11.0.5
