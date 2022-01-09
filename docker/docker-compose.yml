@@ -18,7 +18,7 @@ services:
     image: fametec/bacula-director:11.0.5
     restart: unless-stopped
     volumes:
-      - ./etc:/opt/bacula/etc:ro
+      - ./etc:/opt/bacula/etc
     depends_on: 
       - db      
     ports:
@@ -31,7 +31,7 @@ services:
       - bacula-dir
       - db
     volumes:
-      - ./etc:/opt/bacula/etc:ro
+      - ./etc:/opt/bacula/etc
     ports:
       - 9104:9103
 #
@@ -43,7 +43,7 @@ services:
       - bacula-dir
       - db
     volumes:
-      - ./etc:/opt/bacula/etc:ro
+      - ./etc:/opt/bacula/etc
     ports:
       - 9105:9102
 #
