@@ -19,6 +19,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./etc:/opt/bacula/etc
+      - ./tmp:/otp/bacula/tmp
     depends_on: 
       - db      
     ports:
@@ -32,6 +33,7 @@ services:
       - db
     volumes:
       - ./etc:/opt/bacula/etc
+      - ./tmp:/otp/bacula/tmp
     ports:
       - 9104:9103
 #
@@ -44,6 +46,7 @@ services:
       - db
     volumes:
       - ./etc:/opt/bacula/etc
+      - ./tmp:/otp/bacula/tmp
     ports:
       - 9105:9102
 #
