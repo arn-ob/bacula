@@ -20,6 +20,7 @@ services:
     volumes:
       - ./etc:/opt/bacula/etc
       - ./tmp:/otp/bacula/tmp
+      - ./working:/otp/bacula/working
     depends_on: 
       - db      
     ports:
@@ -34,6 +35,7 @@ services:
     volumes:
       - ./etc:/opt/bacula/etc
       - ./tmp:/otp/bacula/tmp
+      - ./working:/otp/bacula/working
     ports:
       - 9104:9103
 #
@@ -47,6 +49,7 @@ services:
     volumes:
       - ./etc:/opt/bacula/etc
       - ./tmp:/otp/bacula/tmp
+      - ./working:/otp/bacula/working
     ports:
       - 9105:9102
 #
