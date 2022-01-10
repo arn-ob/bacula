@@ -2,3 +2,4 @@ working/*
 etc/baculum/Config-web-apache/session.dump
 etc/working/*
 tmp/*
+restores/*

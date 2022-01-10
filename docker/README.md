@@ -8,6 +8,7 @@ working is for the backuping file
 ```bash
 mkdir tmp 
 mkdir working
+mkdir restores
 ```
 
 ## How i run it 
@@ -21,3 +22,15 @@ docker-compose up --build
 ```bash
 docker exec -it docker_bacula-dir_1 bconsole
 ```
+
+## How restore
+
+Run bconsole then 
+
+```txt
+restore all
+select jobID: 136
+mark *
+done
+```
+

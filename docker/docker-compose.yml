@@ -19,8 +19,9 @@ services:
     restart: unless-stopped
     volumes:
       - ./etc:/opt/bacula/etc
-      - ./tmp:/otp/bacula/tmp
-      - ./working:/otp/bacula/working
+      - ./tmp:/tmp
+      - ./working:/home
+      - ./restores:/tmp/bacula-restores
     depends_on: 
       - db      
     ports:
@@ -34,8 +35,9 @@ services:
       - db
     volumes:
       - ./etc:/opt/bacula/etc
-      - ./tmp:/otp/bacula/tmp
-      - ./working:/otp/bacula/working
+      - ./tmp:/tmp
+      - ./working:/home
+      - ./restores:/tmp/bacula-restores
     ports:
       - 9104:9103
 #
@@ -48,8 +50,9 @@ services:
       - db
     volumes:
       - ./etc:/opt/bacula/etc
-      - ./tmp:/otp/bacula/tmp
-      - ./working:/otp/bacula/working
+      - ./tmp:/tmp
+      - ./working:/home
+      - ./restores:/tmp/bacula-restores
     ports:
       - 9105:9102
 #
